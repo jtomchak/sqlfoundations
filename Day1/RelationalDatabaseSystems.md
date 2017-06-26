@@ -1,3 +1,21 @@
+##Debugging Steps
+* ReferenceError: inquire is not defined
+* Users/jtomchak/Documents/Node/weatherCommander/sample.js:25
+  inquirer.prompt(questions).then(function(answers.value) {
+SyntaxError: Unexpected token .
+
+##Where to start ? 
+* Look through the WHOLE ERROR
+* Google the error
+* check with coworkers 
+* more google searching
+
+
+
+##Needed
+* SQLite(http://www.sqlite.org/2017/sqlite-dll-win64-x64-3190300.zip)
+* 
+
 ##Relational Database Systems 
 * Structured Query Language
 * concept called a 'transaction'
@@ -18,14 +36,14 @@
 ---
 
 
-##DDL
+##DDL Data Definition Language
 * *Create:* For the creation of tables and other objects in your database. There are over 50 different objects you can create within a database.
 * *Alter:* Many of the objects you create can be altered after creation, but not all. The benefit here is that altering an object is an alternative to dropping and re-creating an object. This can come in handy when an object may contain thousands or millions of rows of data.
 * *Drop:* The opposite of create, and analogous to a delete. If you drop an object, you not only delete the object definition but also any data stored inside of it.
 
 ---
 
-##DML
+##DML Data Manipulation Language
 * *Insert:* For adding data to a table.
 * *Select:* For retrieving data from a table.
 * *Delete:* For removing data from a table.
@@ -45,6 +63,8 @@
   * SELECT ArtistId, count(ArtistId) FROM albums GROUP BY ArtistId
   //temp column ArtistId
 
+SELECT user_id, count(user_id) FROM books GROUP BY user_id
+
   ---
 
 
@@ -52,12 +72,18 @@
 * INSERT INTO [table name] (column list) VALUES (value list)
 * CREATE TABLE customersToCall (Name VARCHAR(60), Phone VARCHAR(24))
 * SELECT (FirstName || ' ' ||  LastName) as Name, Phone from customers where Country = 'Brazil'
-
-
 ---
+##MAKING TABLES
+##make sure it has an ID
+users:
+  * first name
+  * last name
+  * address
+  * phone number
 
-
-##Deleting Data
-* Scray Stuff!!!!
-* DELETE FROM playlists where PlayListId = 19
-  
+books:
+  * title
+  * author
+  * genre
+  * usersId
+  * publishDate
