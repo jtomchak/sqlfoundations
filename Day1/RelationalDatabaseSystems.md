@@ -63,7 +63,7 @@ SyntaxError: Unexpected token .
   * SELECT ArtistId, count(ArtistId) FROM albums GROUP BY ArtistId
   //temp column ArtistId
 
-SELECT user_id, count(user_id) FROM books GROUP BY user_id
+<!--SELECT user_id, count(user_id) FROM books GROUP BY user_id-->
 
   ---
 
@@ -87,3 +87,16 @@ books:
   * genre
   * usersId
   * publishDate
+
+
+  * The lost boys
+  * The dream team
+  * Team Impact
+  * Nice Pants
+  * The cupcake kids
+  * LMGTFY
+  * Meat Pants
+  * Team Genesis (too hard to spell)
+  * Vikings lead by Jaric
+  * Code warriors
+  * 
