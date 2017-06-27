@@ -24,5 +24,15 @@ ON books.user_id = users.user_id
 
 ##Procedures
   * Stored Procedure: A reusable sql query which is optimized for performance.
+  ```
+  CREATE PROCEDURE NewApplicationUser (@UserName VARCHAR(50), @password VARCHAR(50)
+AS
+BEGIN
+DECLARE @user_id INT
+INSERT INTO Users VALUES (@UserName)
+SELECT @user_id = user_id FROM Users WHERE UserName = @UserName
+INSERT INTO Passwords VALUES (@user_id, @password)
+END
+```
 
 ##HandsOnChallenge
