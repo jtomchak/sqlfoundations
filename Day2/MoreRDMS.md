@@ -15,9 +15,14 @@ FROM books JOIN users
 ON books.user_id = users.user_id
 
 ##Views
+  * represent a query to the user as a table would appear.
 
 ##Transactions
 
+  * Transactions: A Transaction is a means of grouping database actions into a reversible batch.
+  * Discussed yesterday, recordered linear BEGIN, ROLLBACK, END/COMMIT
+
 ##Procedures
+  * Stored Procedure: A reusable sql query which is optimized for performance.
 
 ##HandsOnChallenge
