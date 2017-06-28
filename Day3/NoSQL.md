@@ -16,8 +16,15 @@
   [Mongo](http://makble.com/images/mongodb-advantages-disadvantages.png)
   [Compare](https://s-media-cache-ak0.pinimg.com/originals/cd/f0/1b/cdf01ba5ff75affe1400e812d36577a1.gif)
 
+##NOSQL Types
+  * Document Database
+  * Key-Value Database (Redis)
+  * Graph Database
+  * Object Database
+
 
  ##Mongo Setup
+  * Mongodb install [LINK](https://www.mongodb.com/download-center#previous)
   * Download Robo 3T [LINK](https://robomongo.org)
   * mlab and make an account [LINK](https://www.mlab.com)
 
@@ -29,11 +36,27 @@
   ---
 
   * Connect Robo 3T -> mlab db
-  * mongodb://<dbuser>:<dbpassword>@ds139262.mlab.com:39262/lmslab
+  * mongodb://<dbuser>:<dbpassword>@ds139262.mlab.com:39262/<databasename>
   * see [LINK](https://www.dropbox.com/s/zbi0omwh957qglv/mlab2.png?dl=0)
   * see [LINK](https://www.dropbox.com/s/zbi0omwh957qglv/mlab2.png?dl=0)
 
 
   * Mongo import data
-    mongoimport -h ds139262.mlab.com:39262 -d <lmslab> -c <collections> -u <user>  -p <password> --file primer-dataset.json
+    mongoimport -h ds139262.mlab.com:39262 -d <databasename> -c <collections> -u <user>  -p <password> --file primer-dataset.json
+
+
+  ##Mongo Commands
+    * db.[collection_name].insertOne([document_schema])//to insert new record
+    * db.[collection].insertMany( [ {document1}, {document2}, … {documentN}]) //to insert many at once
+
+    //TODO: Embedded document
+    * db.resturants.find({ "borough": "Manhattan" })
+
+    * db.collection.aggregate( [ <stage1>, <stage2>, ... ] )
+    * where <stage1> is a sequentially data processing step
+    * 
+    * $group, $match, 
+    //TODO: Find all 'Brazilian' cusisine and group by bourough with count
+
+
 
