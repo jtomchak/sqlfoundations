@@ -57,6 +57,13 @@
     * 
     * $group, $match, 
     //TODO: Find all 'Brazilian' cusisine and group by bourough with count
+    db.resturants.aggregate(
+   [
+     { $match: { "cuisine": "American" } },
+     { $group: { "_id": "$borough", "count": { $sum: 1 } } }
+   ]
+);
+```db.appusers.updateOne({"_id" : ObjectId("59542d93cb46121a31a3bc2b")}, { $set : { "address.zipcode" : "85001"}})```
 
 
 
