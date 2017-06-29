@@ -11,8 +11,8 @@ ON tracks.AlbumId = albums.AlbumId //USING (AlbumId)
 WHERE ArtistId = 1
 
 SELECT title, (first_name || " " || last_name) as name
-FROM books JOIN users
-ON books.user_id = users.user_id
+FROM books 
+JOIN users ON books.user_id = users.user_id
 
 ##Views
   * represent a query to the user as a table would appear.
