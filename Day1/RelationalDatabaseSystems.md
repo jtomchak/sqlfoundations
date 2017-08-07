@@ -1,30 +1,41 @@
-##Debugging Steps
+## Debugging Steps
 * ReferenceError: inquire is not defined
 * Users/jtomchak/Documents/Node/weatherCommander/sample.js:25
   inquirer.prompt(questions).then(function(answers.value) {
 SyntaxError: Unexpected token .
 
-##Where to start ? 
+---
+
+## Where to start ? 
 * Look through the WHOLE ERROR
 * Google the error
 * check with coworkers 
 * more google searching
 
+---
 
-
-##Needed
+## Needed
 * SQLite(http://www.sqlite.org/2017/sqlite-dll-win64-x64-3190300.zip)
-* 
+* db browser for SQL [LINK](http://sqlitebrowser.org/)
 
-##Relational Database Systems 
+---
+
+## Relational Database Systems 
 * Structured Query Language
 * concept called a 'transaction'
 
+---
+
+![inline](http://4.bp.blogspot.com/-G1gC5bW1Z38/VedLel7FRlI/AAAAAAAAd14/IIhA1nDJMO4/s1600/blocking%2Bin%2Bsql%2Bserver.png)
+
+---
+
+![inline](http://dbakevlar.com/wp-content/uploads/2017/06/with-rowlick.png)
 
 ---
 
 
-##Offerings
+## Offerings
 * MySQL 
 * Postgresql 
 * SQLite 
@@ -36,14 +47,14 @@ SyntaxError: Unexpected token .
 ---
 
 
-##DDL Data Definition Language
+## DDL Data Definition Language
 * *Create:* For the creation of tables and other objects in your database. There are over 50 different objects you can create within a database.
 * *Alter:* Many of the objects you create can be altered after creation, but not all. The benefit here is that altering an object is an alternative to dropping and re-creating an object. This can come in handy when an object may contain thousands or millions of rows of data.
 * *Drop:* The opposite of create, and analogous to a delete. If you drop an object, you not only delete the object definition but also any data stored inside of it.
 
 ---
 
-##DML Data Manipulation Language
+## DML Data Manipulation Language
 * *Insert:* For adding data to a table.
 * *Select:* For retrieving data from a table.
 * *Delete:* For removing data from a table.
@@ -51,7 +62,13 @@ SyntaxError: Unexpected token .
 
 ---
 
-##Select
+```sql
+SELECT user_id, count(user_id) FROM books GROUP BY user_id
+```
+
+---
+
+## Select
 * SELECT [column names] FROM table_name
 * WHERE for filtering
   * SELECT [column names] FROM table_name WHERE [row restrictions]
@@ -65,16 +82,23 @@ SyntaxError: Unexpected token .
 
 <!--SELECT user_id, count(user_id) FROM books GROUP BY user_id-->
 
-  ---
+---
 
 
-##Insert / Create
+## Insert / Create
 * INSERT INTO [table name] (column list) VALUES (value list)
 * CREATE TABLE customersToCall (Name VARCHAR(60), Phone VARCHAR(24))
 * SELECT (FirstName || ' ' ||  LastName) as Name, Phone from customers where Country = 'Brazil'
+
 ---
-##MAKING TABLES
-##make sure it has an ID
+
+## Excercise
+## MAKING TABLES
+
+
+---
+
+```sql
 users:
   * first name
   * last name
@@ -88,15 +112,4 @@ books:
   * usersId
   * publishDate
 
-
-  * The lost boys
-  * The dream team
-  * Team Impact
-  * Nice Pants
-  * The cupcake kids
-  * LMGTFY
-  * Meat Pants
-  * Team Genesis (too hard to spell)
-  * Vikings lead by Jaric
-  * Code warriors
-  * 
+  ```
