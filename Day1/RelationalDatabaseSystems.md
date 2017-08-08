@@ -20,6 +20,11 @@ SyntaxError: Unexpected token .
 
 ---
 
+# Structured Query Language
+SQL (pronounced "ess-que-el") stands for Structured Query Language. SQL is used to communicate with a database. According to ANSI (American National Standards Institute), it is the standard language for relational database management systems.
+
+---
+
 ## Relational Database Systems 
 * Structured Query Language
 * concept called a 'transaction'
@@ -59,6 +64,18 @@ SyntaxError: Unexpected token .
 * *Select:* For retrieving data from a table.
 * *Delete:* For removing data from a table.
 * *Update:* Alters data in a row of a table, 'updating' existing values to the new values you provide.
+
+---
+
+```sql
+BEGIN;
+
+SELECT * 
+FROM houses 
+WHERE Contains(zipcode, 850) AND Contains(running_water, true);
+
+ROLLBACK;
+```
 
 ---
 
@@ -113,3 +130,13 @@ books:
   * publishDate
 
   ```
+
+# 5 Users, and each user needs a minium of 2 books 'checked out'
+# Business Requirements
+  * Genres by Total, order from most to least
+  * Book title with User's **FULL** name, order alphabeticly by user's last name
+  * Books Published before April 17, 2017, with Title, Author
+
+
+
+---
