@@ -31,10 +31,14 @@ class ColorPoint extends Point {
         super(x, y);
         this.color = color;
     }
-    toString() {
+    toStringColor() {
         return super.toString() + ' in ' + this.color;
     }
 }
+
+const brightRedDot = new ColorPoint(5, 10, 'red');
+brightRedDot.toStringColor(); // (5, 10) in red
+brightRedDot.toString(); // (5, 10)
 ```
 
 ---
@@ -54,7 +58,7 @@ class ColorPoint extends Point {
 
 ---
 
-# The prototype of a subclass **is** the superclass in ECMAScript 2015:
+# The prototype chain of a subclass **is** pointed directly at the superclass / base in ECMAScript 2015:
 
 ---
 

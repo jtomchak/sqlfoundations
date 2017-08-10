@@ -5,9 +5,9 @@ class Shape {
   constructor(x, y) {
     this.setPosition(x, y);
   }
-  setPosition(x, y) {
-    this.x = x;
-    this.y = y;
+  setPosition(dog, cat) {
+    this.x = dog;
+    this.y = cat;
   }
   toString() {
     var txt = "\n";
