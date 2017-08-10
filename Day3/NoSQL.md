@@ -68,6 +68,8 @@ autoscale: true
 ---
 
   * Mongo import data
+  monogoimport -h ds027165.mlab.com:27165 -d super_restaurants -c restaurants -u admin -p jsfullstack --file 
+
     mongoimport -h ds139262.mlab.com:39262 -d <databasename> -c <collections> -u <user>  -p <password> --file primer-dataset.json
 
 ---
