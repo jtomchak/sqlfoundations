@@ -13,7 +13,7 @@ var resturants = require("./routes/resturants");
 
 var app = express();
 //TODO: put your mlabs db connection here
-mongoose.connect("<REMEMBER YOUR STRING IN THE BLOCKS");
+mongoose.connect("<REMEMBER YOUR STRING IN THE BLOCKS>");
 
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
