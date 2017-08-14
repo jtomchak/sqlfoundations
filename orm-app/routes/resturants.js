@@ -6,7 +6,10 @@ var resturantsController = require("../controllers/resturants.controller");
 /* GET resturants listing. */
 resturantsRouter.route("/").get(resturantsController.get);
 
-/* GET resturant deatils by id. */
-resturantsRouter.route("/:id").get(resturantsController.getDetails);
+/* GET resturants by borough. */
+resturantsRouter.get("/:borough", function(req, res, next) {
+  var borough = req.params.borough;
+  res.send("PLEASE WORK " + borough);
+});
 
 module.exports = resturantsRouter;

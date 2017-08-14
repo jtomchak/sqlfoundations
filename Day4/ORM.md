@@ -88,6 +88,7 @@ Person.findOne({ 'name.last': 'Ghost' }, 'name occupation', function (err, perso
 
 ```javascript
 var mongoose = require('mongoose');
+var otherController = require('./otherController');
 mongoose.connect('mongodb://localhost/test');
 
 var Cat = mongoose.model('Cat', { name: String });

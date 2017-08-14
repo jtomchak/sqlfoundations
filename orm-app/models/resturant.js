@@ -1,8 +1,9 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 var resturantsSchema = new Schema({
+  cuisine: String,
+  borough: String,
   name: String,
-  lastname: String,
   address: {
     street: String,
     city: String,
@@ -12,5 +13,5 @@ var resturantsSchema = new Schema({
   created_at: Date,
   updated_at: Date
 });
-var resturants = mongoose.model("resturants", resturantsSchema, resturants);
+var resturants = mongoose.model("resturants", resturantsSchema, "restaurants");
 module.exports = resturants;
