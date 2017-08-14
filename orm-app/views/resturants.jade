@@ -1,5 +1,10 @@
 h1 American Resturants
 
 if bouroughs
+    div 
+    ul
   each b in bouroughs
-    div #{b._id} #{b.count}
+      li  
+        a(href=b._id) #{b._id} 
+        | #{b.count} 
+    
